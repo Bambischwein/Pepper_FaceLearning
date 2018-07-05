@@ -1,0 +1,4 @@
+<launch>
+<!--path to haarcascade, path to csv, camera id-->
+<node pkg="face_learning" type="face_learning" name="face_learning" args="/usr/share/opencv/haarcascades/haarcascade_frontalface_default.xml /home/hanna/my_ws/src/face_learning/src/test.csv 0"/>
+</launch>

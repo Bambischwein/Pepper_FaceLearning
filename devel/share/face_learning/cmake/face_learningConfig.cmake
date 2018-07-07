@@ -116,7 +116,7 @@ if(NOT " " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "face_learning")
+set(libraries "")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/hanna/my_ws/devel/lib;/home/hanna/my_ws/devel/lib;/home/hanna/face_learning_ws/devel/lib;/home/hanna/wg-perception_ws/devel/lib;/home/hanna/kinect2_ws/devel/lib;/home/hanna/pepper_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/hanna/my_ws/devel/lib;/home/hanna/action_ws/devel/lib;/home/hanna/my_ws/devel/lib;/home/hanna/face_learning_ws/devel/lib;/home/hanna/wg-perception_ws/devel/lib;/home/hanna/kinect2_ws/devel/lib;/home/hanna/pepper_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

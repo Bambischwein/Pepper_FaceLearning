@@ -188,5 +188,4 @@ set(CMAKE_DEPEND_INFO_FILES
   "face_detection/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "face_detection/CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "face_detection/CMakeFiles/face_detection.dir/DependInfo.cmake"
-  "face_learning/CMakeFiles/face_learning.dir/DependInfo.cmake"
   )

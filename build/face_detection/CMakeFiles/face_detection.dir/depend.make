@@ -188,6 +188,8 @@ face_detection/CMakeFiles/face_detection.dir/src/face_detection.cpp.o: /opt/ros/
 face_detection/CMakeFiles/face_detection.dir/src/face_detection.cpp.o: /opt/ros/kinetic/include/ros/wall_timer.h
 face_detection/CMakeFiles/face_detection.dir/src/face_detection.cpp.o: /opt/ros/kinetic/include/ros/wall_timer_options.h
 face_detection/CMakeFiles/face_detection.dir/src/face_detection.cpp.o: /opt/ros/kinetic/include/rosconsole/macros_generated.h
+face_detection/CMakeFiles/face_detection.dir/src/face_detection.cpp.o: /opt/ros/kinetic/include/sensor_msgs/Image.h
+face_detection/CMakeFiles/face_detection.dir/src/face_detection.cpp.o: /opt/ros/kinetic/include/std_msgs/Header.h
 face_detection/CMakeFiles/face_detection.dir/src/face_detection.cpp.o: /opt/ros/kinetic/include/std_msgs/String.h
 face_detection/CMakeFiles/face_detection.dir/src/face_detection.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcDecl.h
 face_detection/CMakeFiles/face_detection.dir/src/face_detection.cpp.o: /opt/ros/kinetic/include/xmlrpcpp/XmlRpcValue.h

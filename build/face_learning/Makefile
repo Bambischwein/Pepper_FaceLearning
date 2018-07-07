@@ -89,16 +89,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : edit_cache/fast
+.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -111,17 +111,6 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -132,6 +121,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -165,48 +165,6 @@ depend:
 	cd /home/hanna/my_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-face_learning/CMakeFiles/face_learning.dir/rule:
-	cd /home/hanna/my_ws/build && $(MAKE) -f CMakeFiles/Makefile2 face_learning/CMakeFiles/face_learning.dir/rule
-.PHONY : face_learning/CMakeFiles/face_learning.dir/rule
-
-# Convenience name for target.
-face_learning: face_learning/CMakeFiles/face_learning.dir/rule
-
-.PHONY : face_learning
-
-# fast build rule for target.
-face_learning/fast:
-	cd /home/hanna/my_ws/build && $(MAKE) -f face_learning/CMakeFiles/face_learning.dir/build.make face_learning/CMakeFiles/face_learning.dir/build
-.PHONY : face_learning/fast
-
-src/face_learning.o: src/face_learning.cpp.o
-
-.PHONY : src/face_learning.o
-
-# target to build an object file
-src/face_learning.cpp.o:
-	cd /home/hanna/my_ws/build && $(MAKE) -f face_learning/CMakeFiles/face_learning.dir/build.make face_learning/CMakeFiles/face_learning.dir/src/face_learning.cpp.o
-.PHONY : src/face_learning.cpp.o
-
-src/face_learning.i: src/face_learning.cpp.i
-
-.PHONY : src/face_learning.i
-
-# target to preprocess a source file
-src/face_learning.cpp.i:
-	cd /home/hanna/my_ws/build && $(MAKE) -f face_learning/CMakeFiles/face_learning.dir/build.make face_learning/CMakeFiles/face_learning.dir/src/face_learning.cpp.i
-.PHONY : src/face_learning.cpp.i
-
-src/face_learning.s: src/face_learning.cpp.s
-
-.PHONY : src/face_learning.s
-
-# target to generate assembly for a file
-src/face_learning.cpp.s:
-	cd /home/hanna/my_ws/build && $(MAKE) -f face_learning/CMakeFiles/face_learning.dir/build.make face_learning/CMakeFiles/face_learning.dir/src/face_learning.cpp.s
-.PHONY : src/face_learning.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,14 +174,10 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... face_learning"
-	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... test"
-	@echo "... src/face_learning.o"
-	@echo "... src/face_learning.i"
-	@echo "... src/face_learning.s"
+	@echo "... edit_cache"
 .PHONY : help
 
 

@@ -54,8 +54,7 @@
 /home/hanna/my_ws/build/face_learning/CMakeFiles/list_install_components.dir
 /home/hanna/my_ws/build/face_learning/CMakeFiles/install.dir
 /home/hanna/my_ws/build/face_learning/CMakeFiles/rebuild_cache.dir
-/home/hanna/my_ws/build/face_learning/CMakeFiles/edit_cache.dir
-/home/hanna/my_ws/build/face_learning/CMakeFiles/face_learning.dir
-/home/hanna/my_ws/build/face_learning/CMakeFiles/install/local.dir
 /home/hanna/my_ws/build/face_learning/CMakeFiles/install/strip.dir
+/home/hanna/my_ws/build/face_learning/CMakeFiles/install/local.dir
 /home/hanna/my_ws/build/face_learning/CMakeFiles/test.dir
+/home/hanna/my_ws/build/face_learning/CMakeFiles/edit_cache.dir

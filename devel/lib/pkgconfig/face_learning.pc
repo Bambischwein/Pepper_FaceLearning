@@ -4,5 +4,5 @@ Name: face_learning
 Description: Description of face_learning
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/hanna/my_ws/devel/lib -lface_learning
+Libs: -L/home/hanna/my_ws/devel/lib 
 Requires: 

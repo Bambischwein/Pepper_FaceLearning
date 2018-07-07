@@ -8,7 +8,7 @@ project(face_learning)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-    roscpp
+  roscpp
 )
 find_package(OpenCV)
 
@@ -60,16 +60,16 @@ find_package(OpenCV)
 # )
 
 ## Generate actions in the 'action' folder
-# add_action_files(
-#   FILES
-#   Action1.action
-#   Action2.action
-# )
+#add_action_files(
+ # FILES face_learning.action
+  #Action2.action
+#)
 
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
 #   std_msgs  # Or other packages containing msgs
+#   actionlib_msgs
 # )
 
 ################################################
@@ -103,9 +103,9 @@ find_package(OpenCV)
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-  LIBRARIES face_learning
-#  CATKIN_DEPENDS other_catkin_pkg
-#  DEPENDS system_lib
+  #LIBRARIES face_learning
+  #  DEPENDS system_lib
+  #CATKIN_DEPENDS actionlib
 )
 
 ###########
@@ -134,7 +134,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collid
 
-add_executable(face_learning src/face_learning.cpp)
+#add_executable(face_learning src/face_learning.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -147,11 +147,11 @@ add_executable(face_learning src/face_learning.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(face_learning
-   ${catkin_LIBRARIES}
-  ${OpenCV_LIBRARIES}
+# target_link_libraries(face_learning
+#    ${catkin_LIBRARIES}
+#   ${OpenCV_LIBRARIES}
 
-   )
+#    )
 
 #############
 ## Install ##

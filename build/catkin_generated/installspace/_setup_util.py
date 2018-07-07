@@ -262,7 +262,7 @@ if __name__ == '__main__':
             sys.exit(1)
 
         # environment at generation time
-        CMAKE_PREFIX_PATH = '/home/hanna/my_ws/devel;/home/hanna/face_learning_ws/devel;/home/hanna/wg-perception_ws/devel;/home/hanna/kinect2_ws/devel;/home/hanna/pepper_ws/devel;/opt/ros/kinetic'.split(';')
+        CMAKE_PREFIX_PATH = '/home/hanna/action_ws/devel;/home/hanna/my_ws/devel;/home/hanna/face_learning_ws/devel;/home/hanna/wg-perception_ws/devel;/home/hanna/kinect2_ws/devel;/home/hanna/pepper_ws/devel;/opt/ros/kinetic'.split(';')
         # prepend current workspace if not already part of CPP
         base_path = os.path.dirname(__file__)
         if base_path not in CMAKE_PREFIX_PATH:

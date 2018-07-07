@@ -282,6 +282,18 @@ face_learning_BINARY_DIR:STATIC=/home/hanna/my_ws/build/face_learning
 //Value Computed by CMake
 face_learning_SOURCE_DIR:STATIC=/home/hanna/my_ws/src/face_learning
 
+//Value Computed by CMake
+face_learning_action_BINARY_DIR:STATIC=/home/hanna/my_ws/build/face_learning_action
+
+//Value Computed by CMake
+face_learning_action_SOURCE_DIR:STATIC=/home/hanna/my_ws/src/face_learning_action
+
+//Value Computed by CMake
+face_learning_actions_BINARY_DIR:STATIC=/home/hanna/my_ws/build/face_learning_actions
+
+//Value Computed by CMake
+face_learning_actions_SOURCE_DIR:STATIC=/home/hanna/my_ws/src/face_learning_actions
+
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/kinetic/share/gencpp/cmake
 

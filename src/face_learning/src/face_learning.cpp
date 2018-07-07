@@ -4,6 +4,8 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/objdetect.hpp"
 #include "opencv2/aruco.hpp"
+#include "ros/ros.h"
+#include "std_msgs/String.h"
 
 #include <ros/console.h>
 
@@ -43,7 +45,13 @@ static void trainModel(vector<Mat>& images, vector<int>& labels, Ptr<FisherFaceR
       model->train(images, labels);
 }
 
-int main(int argc, const char *argv[])
+
+static void chatterCallback(const std_msgs::String::ConstPtr& msg)
+{
+}
+
+
+int main(int argc, char **argv)
 {
     // Check for valid command line arguments, print usage if no arguments were given.
     if (argc != 6) {
@@ -58,6 +66,11 @@ int main(int argc, const char *argv[])
     }
     cout << "Argumente stimmen" << endl;
 
+    ros::init(argc, argv, "Listener");
+    ros::NodeHandle n;
+    ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
+
+    
     cv::Ptr<cv::aruco::Dictionary> test;
     test = cv::aruco::getPredefinedDictionary(cv::aruco::DICT_5X5_250);
     //test

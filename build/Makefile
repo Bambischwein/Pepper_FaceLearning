@@ -490,19 +490,6 @@ face_detection/fast:
 	$(MAKE) -f face_detection/CMakeFiles/face_detection.dir/build.make face_detection/CMakeFiles/face_detection.dir/build
 .PHONY : face_detection/fast
 
-#=============================================================================
-# Target rules for targets named face_learning
-
-# Build rule for target.
-face_learning: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 face_learning
-.PHONY : face_learning
-
-# fast build rule for target.
-face_learning/fast:
-	$(MAKE) -f face_learning/CMakeFiles/face_learning.dir/build.make face_learning/CMakeFiles/face_learning.dir/build
-.PHONY : face_learning/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -541,7 +528,6 @@ help:
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... face_detection"
-	@echo "... face_learning"
 .PHONY : help
 
 
